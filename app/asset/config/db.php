@@ -7,7 +7,7 @@ $servername = $env["db_host"];
 $username =  $env["db_user"];
 $password =  $env["db_pass"];
 
-if ($_SERVER['SERVER_NAME'] == "www.letsdiry.in"){
+if ($_SERVER['SERVER_NAME'] == "www.letsdairy.in"){
   $database =  $env["db_live_name"];
 } else {
   $database =  $env["db_test_name"];
