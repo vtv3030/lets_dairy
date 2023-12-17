@@ -1,0 +1,24 @@
+//cockies code
+
+Create Cockies
+$expiry = time()+120;
+$data = (object) array( "userName" => "Vaibhav", "authToken" => "123456789","expiry" => $expiry);
+setcookie( "logged_User", json_encode( $data), $expiry );
+
+read cokcies
+
+date_default_timezone_set("Asia/Calcutta");
+if(isset($_COOKIE["logged_User"])){
+    $cookie = json_decode($_COOKIE["logged_User"]);
+    echo $cookie->userName;
+    echo "<br>";
+    echo $cookie->authToken;
+    echo "<br>";
+    $expiry = $cookie->expiry;
+    echo date("d-m-Y h:i:s",$expiry);
+    
+    if($expiry>time())
+    echo "<br>Valid Cockies";
+    else
+    header('Location: /app/expired');
+}

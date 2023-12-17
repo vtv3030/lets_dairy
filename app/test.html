@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Tiles with Counters</title>
+    <style>
+        /* Container for the tiles */
+        .tile-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Individual tile styles */
+        .tile {
+            flex: 1;
+            min-width: calc(20% - 20px);
+            margin: 15px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Counter styles */
+        .counter {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            font-weight: bold;
+            font-size:25px;
+            background-color: aqua;
+            color: #040220;
+            padding: 10px 10px;
+            border-radius: 11%;
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .tile {
+                min-width: calc(20% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tile {
+                min-width: 90%;
+            }
+        }
+        .bold{
+            font-weight:bold;
+            font-size: 18px;
+        }
+        .btn-details{
+            width:70%;
+            font-weight: bold;
+            font-size: 18px;
+            margin-top:10px;
+            padding:10px
+        }
+        .tile-img{
+            height:100%;
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="tile-container">
+        <!-- Tile 1 -->
+        <div class="tile">
+            <span class="counter">5</span>
+            <table>
+                <tr>
+                    <td style="width: 30%;">
+                        <img class="tile-img" src="..\app\asset\img\cow.png">
+                    </td>
+                    <td>
+                        <h1>COW</h1>
+                        <center>
+                            <table>
+                                <tr><td class ="bold">Pregnant</td><td>: 01</td></tr>
+                                <tr><td class ="bold">Lacting</td><td>: 02</td></tr>
+                                <tr><td class ="bold">Non-Lacting</td><td>: 02</td></tr>
+                            </table>
+                            <button class="btn-details">View Details</button>
+                        </center>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Tile 2 -->
+        <div class="tile">
+            <span class="counter">5</span>
+            <table>
+                <tr>
+                    <td style="width: 30%;">
+                        <img class="tile-img" src="..\app\asset\img\buffelo.png">
+                    </td>
+                    <td>
+                        <h1>Buffelo</h1>
+                        <center>
+                            <table>
+                                <tr><td class ="bold">Pregnant</td><td>: 01</td></tr>
+                                <tr><td class ="bold">Lacting</td><td>: 02</td></tr>
+                                <tr><td class ="bold">Non-Lacting</td><td>: 02</td></tr>
+                            </table>
+                            <button class="btn-details">View Details</button>
+                        </center>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Tile 3 -->
+        <div class="tile">
+            <span class="counter">2</span>
+            <table>
+                <tr>
+                    <td style="width: 30%;">
+                        <img class="tile-img" src="..\app\asset\img\others.png">
+                    </td>
+                    <td>
+                        <h1>Others</h1>
+                        <center>
+                            <table>
+                                <tr><td class ="bold">Goat</td><td>: 00</td></tr>
+                                <tr><td class ="bold">Sheep</td><td>: 01</td></tr>
+                                <tr><td class ="bold">Dog</td><td>: 01</td></tr>
+                                <tr><td class ="bold">Horse</td><td>: 00</td></tr>
+                            </table>
+                            <button class="btn-details">View Details</button>
+                        </center>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!-- Add more tiles as needed -->
+    </div>
+</body>
+</html>
